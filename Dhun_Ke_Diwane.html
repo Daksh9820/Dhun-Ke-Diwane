@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhun Ke Diwane - Albums</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('main.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            border: 2px solid #fff; /* Added border style */
+            border-radius: 10px; /* Rounded border corners */
+            padding: 20px; /* Added padding for better spacing */
+        }
+        .album-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .album-list li {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: 2px solid #fff; /* Added border style */
+        }
+        .album-list li:hover {
+            transform: translateY(-5px);
+        }
+        .album-list li h2, .album-list li p {
+            color: #ffffff; /* Changed text color to white */
+            margin-bottom: 5px;
+        }
+        .album-search {
+            background-color: #fff; /* Changed search bar color to white */
+            color: #000; /* Changed search bar text color to black */
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center; /* Centered footer text */
+            padding: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dhun Ke Diwane - Albums</h1>
+        <input type="text" placeholder="Search albums..." class="album-search"> <!-- Added album search bar -->
+        <ul class="album-list">
+            <li onclick="redirectToAlbum('album')">
+                <h2>1. Old Hindi Songs</h2>
+                <p>Artist: Mohammed Rafi, Kishore Kumar, Farida Rehman</p>
+            </li>
+            <li onclick="redirectToAlbum('album2')">
+                <h2>2. Punjabi Songs</h2>
+                <p>Artist: Shubh</p>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        &copy; 2024 Dhun Ke Diwane By Nandini Mahanag | All rights reserved
+    </footer>
+
+    <script>
+        function redirectToAlbum(album) {
+            window.location.href = `${album}.html`;
+        }
+    </script>
+</body>
+</html>
