@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhun Ke Diwane - Album</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('Shubh.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .song-list li {
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            position: relative;
+        }
+        .song-list li:hover {
+            transform: translateY(-5px);
+        }
+        .song-list li h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .song-list li p {
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        audio {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #8BC34A;
+        }
+        input[type="text"] {
+            background-color: white;
+            color: #000;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+        .song-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Punjabi Songs By Shubh</h1>
+        <input type="text" placeholder="Search songs..." class="song-search">
+        <ul class="song-list">
+            <li>
+                <span class="song-number">1</span>
+                <h2>Cheques</h2>
+                <p>Artist: Shubh</p>
+                <audio controls>
+                    <source src="C:\Users\DAKSH\Downloads\Shubh - Cheques (Official Music Video).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p><a href="C:\Users\DAKSH\Downloads\Shubh - Cheques (Official Music Video).mp3" download>Download MP3</a></p>
+            </li>
+            <li>
+                <span class="song-number">2</span>
+                <h2>Elevated</h2>
+                <p>Artist: Shubh</p>
+                <audio controls>
+                    <source src="C:\Users\DAKSH\Downloads\DSWeHRIILZ4 (3).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p><a href="C:\Users\DAKSH\Downloads\DSWeHRIILZ4 (3).mp3" download>Download MP3</a></p>
+            </li>
+            <li>
+                <span class="song-number">3</span>
+                <h2>One Love</h2>
+                <p>Artist: Shubh</p>
+                <audio controls>
+                    <source src="C:\Users\DAKSH\Downloads\DSWeHRIILZ4 (4).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p><a href="C:\Users\DAKSH\Downloads\DSWeHRIILZ4 (4).mp3" download>Download MP3</a></p>
+            </li>
+            <li>
+                <span class="song-number">4</span>
+                <h2>Baller</h2>
+                <p>Artist: Shubh</p>
+                <audio controls>
+                    <source src="C:\Users\DAKSH\Downloads\DSWeHRIILZ4 (5).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p><a href="C:\Users\DAKSH\Downloads\DSWeHRIILZ4 (5).mp3" download>Download MP3</a></p>
+            </li>
+            <li>
+                <span class="song-number">5</span>
+                <h2>No Love</h2>
+                <p>Artist: Shubh</p>
+                <audio controls>
+                    <source src="C:\Users\DAKSH\Downloads\No Love (Official Audio) - Shubh.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p><a href="C:\Users\DAKSH\Downloads\No Love (Official Audio) - Shubh.mp3" download>Download MP3</a></p>
+            </li>
+        </ul>
+    </div>
+    <footer style="text-align: center;">
+        &copy; 2024 Dhun Ke Diwane By Nandini Mahanag | All rights reserved
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchBar = document.querySelector(".song-search");
+            const songs = document.querySelectorAll(".song-list li");
+
+            searchBar.addEventListener("input", function() {
+                const searchTerm = searchBar.value.toLowerCase();
+
+                songs.forEach(function(song) {
+                    const title = song.querySelector("h2").textContent.toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        song.style.display = "block";
+                    } else {
+                        song.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
